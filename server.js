@@ -17,8 +17,14 @@ const prisma = new PrismaClient()
 
 const app = express()
 app.use(express.json())
-app.use(cors()) // liberando o acesso para qualquer front-end se concectar com o servidor.
-                // em ambientes empresariais, colocamos em cors() o endereço do front-end para evitar acessos não autorizados.
+
+app.use(cors({
+  origin: [
+    'https://frontend-cadastro-usuarios-self.vercel.app/', // URL da Vercel
+    'http://localhost:5173'                                // URL do seu React local no Vite
+  ]
+}))
+
 
 
 app.post('/usuarios', async (req, res) => {
