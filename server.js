@@ -20,7 +20,7 @@ app.use(express.json())
 
 app.use(cors({
   origin: [
-    'https://frontend-cadastro-usuarios-self.vercel.app/', // URL da Vercel
+    'https://frontend-cadastro-usuarios-self.vercel.app', // URL da Vercel
     'http://localhost:5173'                                // URL do seu React local no Vite
   ]
 }))
