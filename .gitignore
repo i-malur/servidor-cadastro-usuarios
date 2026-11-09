@@ -1,0 +1,10 @@
+# Dependências
+node_modules/
+
+# Variáveis de ambiente
+.env
+
+# Configurações de IDE e assistentes locais
+.agents/
+.claude/
+.windsurf/
